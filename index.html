@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Emocional de las Redes Sociales | Estilo TikTok</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos generales */
+        :root {
+            --tiktok-black: #010101;
+            --tiktok-dark: #121212;
+            --tiktok-aqua: #69F0AE;
+            --tiktok-red: #FE2C55;
+            --tiktok-pink: #FF2D6F;
+            --tiktok-blue: #25F4EE;
+            --text-light: #FFFFFF;
+            --text-gray: #A0A0A0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-light);
+            background-color: var(--tiktok-black);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Encabezado */
+        header {
+            background-color: var(--tiktok-dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo-icon {
+            color: var(--tiktok-red);
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+        
+        .logo-text {
+            background: linear-gradient(45deg, var(--tiktok-blue), var(--tiktok-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--tiktok-aqua);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(1, 1, 1, 0.8), rgba(18, 18, 18, 0.9)), url('https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(37, 244, 238, 0.2), rgba(254, 44, 85, 0.2));
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--tiktok-blue), var(--tiktok-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: var(--text-gray);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--tiktok-blue), var(--tiktok-pink));
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(37, 244, 238, 0.3);
+        }
+        
+        /* Secciones */
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--tiktok-blue), var(--tiktok-pink));
+            border-radius: 2px;
+        }
+        
+        .card {
+            background-color: var(--tiktok-dark);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(37, 244, 238, 0.1);
+        }
+        
+        .card h3 {
+            color: var(--tiktok-aqua);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        /* Estadísticas */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-card {
+            background-color: var(--tiktok-dark);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--tiktok-blue);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--tiktok-blue), var(--tiktok-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Efectos negativos */
+        .negative-effects {
+            background-color: rgba(18, 18, 18, 0.8);
+        }
+        
+        .effects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .effect-item {
+            background-color: var(--tiktok-dark);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-left: 4px solid var(--tiktok-red);
+            transition: transform 0.3s;
+        }
+        
+        .effect-item:hover {
+            transform: translateY(-5px);
+            border-left-color: var(--tiktok-aqua);
+        }
+        
+        .effect-item h4 {
+            color: var(--tiktok-red);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Consejos */
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tip-card {
+            background-color: var(--tiktok-dark);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border-top: 4px solid var(--tiktok-blue);
+            transition: transform 0.3s;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--tiktok-aqua);
+        }
+        
+        .tip-card h4 {
+            color: var(--tiktok-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Recursos */
+        .resources {
+            background-color: rgba(18, 18, 18, 0.8);
+        }
+        
+        .resource-list {
+            list-style: none;
+        }
+        
+        .resource-list li {
+            background-color: var(--tiktok-dark);
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            border-left: 4px solid var(--tiktok-pink);
+        }
+        
+        .resource-list li:hover {
+            transform: translateX(5px);
+            border-left-color: var(--tiktok-aqua);
+        }
+        
+        .resource-list a {
+            color: var(--tiktok-pink);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .resource-list a:hover {
+            color: var(--tiktok-aqua);
+            text-decoration: underline;
+        }
+        
+        /* Testimonios */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--tiktok-dark);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-gray);
+        }
+        
+        .testimonial-author {
+            color: var(--tiktok-aqua);
+            font-weight: bold;
+        }
+        
+        /* Pie de página */
+        footer {
+            background-color: var(--tiktok-dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--tiktok-blue), var(--tiktok-pink));
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animaciones */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-brain logo-icon"></i>
+                    <span class="logo-text">MenteDigital</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#introduccion">Introducción</a></li>
+                    <li><a href="#estadisticas">Estadísticas</a></li>
+                    <li><a href="#efectos">Efectos</a></li>
+                    <li><a href="#consejos">Consejos</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Impacto Emocional de las Redes Sociales</h1>
+                <p>Exploramos cómo TikTok, Instagram y otras plataformas afectan la salud mental y el bienestar emocional de los estudiantes</p>
+                <a href="#introduccion" class="btn">Descubrir Más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introducción -->
+    <section id="introduccion">
+        <div class="container">
+            <div class="section-title">
+                <h2>Introducción</h2>
+            </div>
+            <div class="card">
+                <h3>La Doble Cara de las Redes Sociales</h3>
+                <p>Las redes sociales se han convertido en una parte integral de la vida de los estudiantes, ofreciendo oportunidades para la conexión, el aprendizaje y el entretenimiento. Plataformas como TikTok, Instagram y Facebook han redefinido la forma en que los jóvenes se comunican, socializan y construyen su identidad.</p>
+                <p>Sin embargo, detrás de la fachada de conexión constante y entretenimiento infinito, se esconde una realidad preocupante: el uso excesivo o inadecuado de estas plataformas puede tener un impacto significativo en la salud emocional y mental de los jóvenes.</p>
+                <p>Esta página web tiene como objetivo informar sobre los efectos emocionales de las redes sociales en estudiantes, proporcionar datos relevantes basados en investigaciones actuales y ofrecer recursos prácticos para un uso más saludable y consciente de estas plataformas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas -->
+    <section id="estadisticas" class="negative-effects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Estadísticas Impactantes</h2>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card floating">
+                    <div class="stat-number">78%</div>
+                    <p>de estudiantes universitarios reportan sentimientos de ansiedad después de usar redes sociales intensivamente</p>
+                </div>
+                <div class="stat-card floating" style="animation-delay: 0.5s;">
+                    <div class="stat-number">63%</div>
+                    <p>de adolescentes sienten que las redes sociales afectan negativamente su autoestima y imagen corporal</p>
+                </div>
+                <div class="stat-card floating" style="animation-delay: 1s;">
+                    <div class="stat-number">4.2h</div>
+                    <p>es el tiempo promedio que los jóvenes pasan en redes sociales diariamente</p>
+                </div>
+                <div class="stat-card floating" style="animation-delay: 1.5s;">
+                    <div class="stat-number">52%</div>
+                    <p>de estudiantes han experimentado ciberacoso o contenido dañino en plataformas sociales</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>¿Qué revelan estas estadísticas?</h3>
+                <p>Los datos muestran una correlación preocupante entre el uso de redes sociales y problemas de salud mental en estudiantes. Un estudio de 2022 encontró que los adolescentes que pasan más de 3 horas al día en redes sociales tienen el doble de probabilidades de reportar síntomas de depresión en comparación con aquellos que usan estas plataformas menos de una hora al día.</p>
+                <p>Además, la exposición constante a contenido idealizado y la cultura de la comparación están contribuyendo a una crisis de autoestima entre los jóvenes, particularmente en grupos vulnerables.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Efectos Negativos -->
+    <section id="efectos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Efectos Emocionales Negativos</h2>
+            </div>
+            <div class="effects-grid">
+                <div class="effect-item">
+                    <h4><i class="fas fa-heart-broken"></i> Ansiedad y Depresión</h4>
+                    <p>La comparación constante con las vidas idealizadas que se muestran en redes sociales puede generar sentimientos de insuficiencia, ansiedad y síntomas depresivos. El "doomscrolling" (consumir noticias negativas de forma compulsiva) también contribuye a estos estados emocionales.</p>
+                </div>
+                <div class="effect-item">
+                    <h4><i class="fas fa-user-minus"></i> Baja Autoestima</h4>
+                    <p>La exposición constante a imágenes de perfección física, logros excepcionales y estilos de vida idealizados puede afectar negativamente la autoimagen y la confianza personal, especialmente durante la adolescencia cuando la identidad está en formación.</p>
+                </div>
+                <div class="effect-item">
+                    <h4><i class="fas fa-running"></i> FOMO (Miedo a Perderse Algo)</h4>
+                    <p>La necesidad constante de estar conectado puede generar ansiedad por perderse eventos, conversaciones o tendencias. Este fenómeno puede llevar a un uso compulsivo de las plataformas y afectar la capacidad de estar presente en el momento actual.</p>
+                </div>
+                <div class="effect-item">
+                    <h4><i class="fas fa-bed"></i> Alteraciones del Sueño</h4>
+                    <p>El uso nocturno de redes sociales interfiere con los patrones de sueño debido a la luz azul de las pantallas y la estimulación mental. La falta de sueño de calidad afecta la salud mental, el rendimiento académico y el bienestar general.</p>
+                </div>
+                <div class="effect-item">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Ciberacoso</h4>
+                    <p>Las plataformas digitales pueden facilitar el acoso, que tiene efectos devastadores en la salud emocional de los estudiantes. El anonimato y la distancia física pueden intensificar estos comportamientos dañinos.</p>
+                </div>
+                <div class="effect-item">
+                    <h4><i class="fas fa-mobile-alt"></i> Adicción Digital</h4>
+                    <p>El diseño adictivo de las redes sociales (notificaciones, recompensas variables, scroll infinito) puede llevar a un uso compulsivo, afectando las relaciones personales, la productividad y el bienestar general.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>El Mecanismo Psicológico</h3>
+                <p>Las redes sociales activan el sistema de recompensa del cerebro de manera similar a otras adicciones. Cada like, comentario o notificación libera dopamina, creando un ciclo de recompensa que refuerza el comportamiento de uso. Este mecanismo neuroquímico explica por qué puede ser tan difícil desconectarse, incluso cuando somos conscientes de los efectos negativos.</p>
+                <p>Además, los algoritmos de estas plataformas están diseñados para mantenernos enganchados, mostrándonos contenido que provoca fuertes reacciones emocionales, ya sean positivas o negativas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consejos -->
+    <section id="consejos" class="negative-effects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Consejos para un Uso Saludable</h2>
+            </div>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h4><i class="fas fa-clock"></i> Establece Límites de Tiempo</h4>
+                    <p>Define horarios específicos para el uso de redes sociales y utiliza aplicaciones que te ayuden a controlar el tiempo de pantalla. Considera establecer "zonas libres de teléfono" en tu hogar, como el dormitorio o la mesa durante las comidas.</p>
+                </div>
+                <div class="tip-card">
+                    <h4><i class="fas fa-filter"></i> Curar tu Feed</h4>
+                    <p>Elimina cuentas que te hacen sentir mal y sigue aquellas que inspiran, educan o entretienen de manera positiva. Sé consciente de cómo te sientes después de interactuar con cierto contenido y ajusta tu feed en consecuencia.</p>
+                </div>
+                <div class="tip-card">
+                    <h4><i class="fas fa-power-off"></i> Desconecta Regularmente</h4>
+                    <p>Programa "días de desconexión" digital para reconectarte con actividades offline y relaciones cara a cara. Comienza con periodos cortos (como una tarde) y gradualmente aumenta el tiempo de desconexión.</p>
+                </div>
+                <div class="tip-card">
+                    <h4><i class="fas fa-brain"></i> Practica la Autoconciencia</h4>
+                    <p>Presta atención a cómo te sientes antes, durante y después de usar redes sociales y ajusta tu uso en consecuencia. Lleva un diario de tus emociones relacionadas con el uso digital para identificar patrones.</p>
+                </div>
+                <div class="tip-card">
+                    <h4><i class="fas fa-balance-scale"></i> No Comparar tu Vida Interior con las Vidas Exteriores de Otros</h4>
+                    <p>Recuerda que las redes sociales muestran versiones editadas y selectivas de la realidad. Practica la gratitud por tu propia vida y reconoce que todos enfrentamos desafíos, incluso si no los comparten en línea.</p>
+                </div>
+                <div class="tip-card">
+                    <h4><i class="fas fa-hands-helping"></i> Busca Ayuda si es Necesario</h4>
+                    <p>Si el uso de redes sociales está afectando significativamente tu bienestar, considera hablar con un consejero o profesional de salud mental. No subestimes el impacto que estas plataformas pueden tener en tu salud emocional.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>La Técnica del "Uso Consciente"</h3>
+                <p>Una estrategia efectiva es practicar el "uso consciente" de redes sociales. Antes de abrir una aplicación, pregúntate: "¿Qué necesidad estoy tratando de satisfacer?" (aburrimiento, conexión, información, etc.). Esto te ayuda a usar las plataformas de manera intencional en lugar de reactiva.</p>
+                <p>Además, establece propósitos específicos para cada sesión (por ejemplo: "voy a revisar mensajes importantes durante 10 minutos") y cierra la aplicación una vez cumplido ese propósito.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimonios Reales</h2>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Pasaba más de 5 horas al día en TikTok y Instagram. Empecé a notar que constantemente me comparaba con influencers y me sentía insuficiente. Mi autoestima estaba por los suelos hasta que decidí hacer un detox digital."
+                    </div>
+                    <div class="testimonial-author">- María, 19 años</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "El FOMO me tenía constantemente estresado. Sentía que si no estaba revisando mis redes, me estaba perdiendo algo importante. Fue difícil, pero establecer límites de tiempo me ha ayudado a recuperar el control de mi vida."
+                    </div>
+                    <div class="testimonial-author">- Carlos, 21 años</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "No me di cuenta de lo adicta que era hasta que intenté pasar un día sin redes sociales. La ansiedad que sentí fue una señal de alarma. Ahora priorizo las interacciones cara a cara y mi salud mental ha mejorado significativamente."
+                    </div>
+                    <div class="testimonial-author">- Sofía, 18 años</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos -->
+    <section id="recursos" class="resources">
+        <div class="container">
+            <div class="section-title">
+                <h2>Recursos de Ayuda</h2>
+            </div>
+            <div class="card">
+                <h3>No Estás Solo: Busca Apoyo</h3>
+                <p>Si estás experimentando dificultades emocionales relacionadas con el uso de redes sociales, estos recursos pueden ayudarte:</p>
+                <ul class="resource-list">
+                    <li><a href="#"><i class="fas fa-phone-alt"></i> Línea Nacional de Prevención del Suicidio</a> - 1-888-628-9454</li>
+                    <li><a href="#"><i class="fas fa-sms"></i> Crisis Text Line</a> - Envía "HOME" al 741741</li>
+                    <li><a href="#"><i class="fas fa-globe"></i> Asociación Americana de Psicología</a> - Recursos sobre salud mental para jóvenes</li>
+                    <li><a href="#"><i class="fas fa-laptop-medical"></i> Centro para el Uso Saludable de la Tecnología</a> - Guías y herramientas</li>
+                    <li><a href="#"><i class="fas fa-heart"></i> Mental Health America</a> - Recursos educativos y de apoyo</li>
+                    <li><a href="#"><i class="fas fa-hands-helping"></i> National Alliance on Mental Illness</a> - Grupos de apoyo y información</li>
+                </ul>
+                <p>Recuerda que buscar ayuda es una muestra de fortaleza, no de debilidad. Si sientes que las redes sociales están afectando negativamente tu bienestar, no dudes en contactar a un profesional de salud mental.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p>&copy; 2023 Impacto Emocional de las Redes Sociales en Estudiantes. Todos los derechos reservados.</p>
+            <p>Esta página es con fines educativos e informativos.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efecto de desplazamiento suave para los enlaces de navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Efecto de aparición gradual al hacer scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Aplicar a las tarjetas y secciones
+        document.querySelectorAll('.card, .stat-card, .effect-item, .tip-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
