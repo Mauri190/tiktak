@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impacto Emocional de las Redes Sociales | Estilo TikTok</title>
+    <title>Impacto Emocional de TikTok | Información y Soluciones</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Estilos generales */
@@ -296,6 +296,37 @@
             font-size: 1.3rem;
         }
         
+        /* Técnicas de gestión del tiempo */
+        .time-management {
+            background-color: rgba(18, 18, 18, 0.8);
+        }
+        
+        .techniques-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .technique-card {
+            background-color: var(--tiktok-dark);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .technique-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--tiktok-aqua);
+        }
+        
+        .technique-card h4 {
+            color: var(--tiktok-aqua);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
         /* Recursos */
         .resources {
             background-color: rgba(18, 18, 18, 0.8);
@@ -366,30 +397,6 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, var(--tiktok-blue), var(--tiktok-pink));
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
-        
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
@@ -428,13 +435,14 @@
             <nav>
                 <div class="logo">
                     <i class="fas fa-brain logo-icon"></i>
-                    <span class="logo-text">MenteDigital</span>
+                    <span class="logo-text">TikTokImpact</span>
                 </div>
                 <ul class="nav-links">
                     <li><a href="#introduccion">Introducción</a></li>
                     <li><a href="#estadisticas">Estadísticas</a></li>
                     <li><a href="#efectos">Efectos</a></li>
                     <li><a href="#consejos">Consejos</a></li>
+                    <li><a href="#tecnicas">Técnicas</a></li>
                     <li><a href="#testimonios">Testimonios</a></li>
                     <li><a href="#recursos">Recursos</a></li>
                 </ul>
@@ -446,9 +454,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Impacto Emocional de las Redes Sociales</h1>
-                <p>Exploramos cómo TikTok, Instagram y otras plataformas afectan la salud mental y el bienestar emocional de los estudiantes</p>
-                <a href="#introduccion" class="btn">Descubrir Más</a>
+                <h1>Impacto Emocional de TikTok</h1>
+                <p>Información completa sobre cómo TikTok afecta la salud mental y estrategias para un uso más consciente y saludable</p>
+                <a href="#introduccion" class="btn">Conocer Más</a>
             </div>
         </div>
     </section>
@@ -460,10 +468,10 @@
                 <h2>Introducción</h2>
             </div>
             <div class="card">
-                <h3>La Doble Cara de las Redes Sociales</h3>
-                <p>Las redes sociales se han convertido en una parte integral de la vida de los estudiantes, ofreciendo oportunidades para la conexión, el aprendizaje y el entretenimiento. Plataformas como TikTok, Instagram y Facebook han redefinido la forma en que los jóvenes se comunican, socializan y construyen su identidad.</p>
-                <p>Sin embargo, detrás de la fachada de conexión constante y entretenimiento infinito, se esconde una realidad preocupante: el uso excesivo o inadecuado de estas plataformas puede tener un impacto significativo en la salud emocional y mental de los jóvenes.</p>
-                <p>Esta página web tiene como objetivo informar sobre los efectos emocionales de las redes sociales en estudiantes, proporcionar datos relevantes basados en investigaciones actuales y ofrecer recursos prácticos para un uso más saludable y consciente de estas plataformas.</p>
+                <h3>El Fenómeno TikTok</h3>
+                <p>TikTok se ha convertido en una de las plataformas de redes sociales más populares, especialmente entre jóvenes y adolescentes. Con su algoritmo altamente efectivo y contenido en formato de video corto, ha revolucionado la forma en que consumimos contenido digital.</p>
+                <p>Sin embargo, detrás del entretenimiento aparentemente inocente, se esconde un diseño intencionalmente adictivo que puede tener consecuencias significativas para la salud mental y el bienestar emocional de sus usuarios.</p>
+                <p>Esta página tiene como objetivo proporcionar información objetiva sobre los efectos de TikTok, basada en investigaciones actuales, y ofrecer estrategias prácticas para un uso más saludable y consciente de la plataforma.</p>
             </div>
         </div>
     </section>
@@ -476,26 +484,26 @@
             </div>
             <div class="stats-container">
                 <div class="stat-card floating">
-                    <div class="stat-number">78%</div>
-                    <p>de estudiantes universitarios reportan sentimientos de ansiedad después de usar redes sociales intensivamente</p>
+                    <div class="stat-number">68%</div>
+                    <p>de usuarios de TikTok reportan haber experimentado el fenómeno "parálisis por TikTok" (perder la noción del tiempo)</p>
                 </div>
                 <div class="stat-card floating" style="animation-delay: 0.5s;">
-                    <div class="stat-number">63%</div>
-                    <p>de adolescentes sienten que las redes sociales afectan negativamente su autoestima y imagen corporal</p>
+                    <div class="stat-number">52%</div>
+                    <p>de adolescentes usuarios de TikTok sienten que la plataforma afecta negativamente su autoestima</p>
                 </div>
                 <div class="stat-card floating" style="animation-delay: 1s;">
-                    <div class="stat-number">4.2h</div>
-                    <p>es el tiempo promedio que los jóvenes pasan en redes sociales diariamente</p>
+                    <div class="stat-number">89 min</div>
+                    <p>es el tiempo promedio diario que los jóvenes pasan en TikTok (casi 1.5 horas)</p>
                 </div>
                 <div class="stat-card floating" style="animation-delay: 1.5s;">
-                    <div class="stat-number">52%</div>
-                    <p>de estudiantes han experimentado ciberacoso o contenido dañino en plataformas sociales</p>
+                    <div class="stat-number">47%</div>
+                    <p>de usuarios han intentado reducir su uso de TikTok sin éxito</p>
                 </div>
             </div>
             <div class="card">
                 <h3>¿Qué revelan estas estadísticas?</h3>
-                <p>Los datos muestran una correlación preocupante entre el uso de redes sociales y problemas de salud mental en estudiantes. Un estudio de 2022 encontró que los adolescentes que pasan más de 3 horas al día en redes sociales tienen el doble de probabilidades de reportar síntomas de depresión en comparación con aquellos que usan estas plataformas menos de una hora al día.</p>
-                <p>Además, la exposición constante a contenido idealizado y la cultura de la comparación están contribuyendo a una crisis de autoestima entre los jóvenes, particularmente en grupos vulnerables.</p>
+                <p>Los datos muestran que TikTok no es simplemente una plataforma de entretenimiento, sino un producto diseñado para maximizar el tiempo de pantalla. Un estudio de 2023 encontró que el algoritmo de TikTok es significativamente más efectivo para mantener la atención de los usuarios que otras plataformas sociales.</p>
+                <p>La naturaleza del contenido en TikTok (videos cortos, scroll infinito, recompensas variables) activa el sistema de recompensa del cerebro de manera similar a las máquinas tragamonedas, creando un ciclo de uso compulsivo difícil de romper.</p>
             </div>
         </div>
     </section>
@@ -508,34 +516,34 @@
             </div>
             <div class="effects-grid">
                 <div class="effect-item">
-                    <h4><i class="fas fa-heart-broken"></i> Ansiedad y Depresión</h4>
-                    <p>La comparación constante con las vidas idealizadas que se muestran en redes sociales puede generar sentimientos de insuficiencia, ansiedad y síntomas depresivos. El "doomscrolling" (consumir noticias negativas de forma compulsiva) también contribuye a estos estados emocionales.</p>
+                    <h4><i class="fas fa-heart-broken"></i> Trastorno de Atención</h4>
+                    <p>El formato de videos ultracortos (15-60 segundos) puede reducir la capacidad de atención sostenida, dificultando la concentración en tareas que requieren enfoque prolongado como estudiar o leer.</p>
                 </div>
                 <div class="effect-item">
-                    <h4><i class="fas fa-user-minus"></i> Baja Autoestima</h4>
-                    <p>La exposición constante a imágenes de perfección física, logros excepcionales y estilos de vida idealizados puede afectar negativamente la autoimagen y la confianza personal, especialmente durante la adolescencia cuando la identidad está en formación.</p>
+                    <h4><i class="fas fa-user-minus"></i> Distorsión de la Realidad</h4>
+                    <p>La exposición constante a contenido altamente editado y perfeccionado puede crear expectativas irreales sobre la vida, las relaciones y el aspecto físico, generando insatisfacción con la propia realidad.</p>
                 </div>
                 <div class="effect-item">
-                    <h4><i class="fas fa-running"></i> FOMO (Miedo a Perderse Algo)</h4>
-                    <p>La necesidad constante de estar conectado puede generar ansiedad por perderse eventos, conversaciones o tendencias. Este fenómeno puede llevar a un uso compulsivo de las plataformas y afectar la capacidad de estar presente en el momento actual.</p>
+                    <h4><i class="fas fa-running"></i> Síndrome de FOMO (Fear Of Missing Out)</h4>
+                    <p>La naturaleza viral de TikTok crea la sensación constante de estar perdiéndose tendencias, retos o contenido popular, generando ansiedad por permanecer conectado.</p>
                 </div>
                 <div class="effect-item">
-                    <h4><i class="fas fa-bed"></i> Alteraciones del Sueño</h4>
-                    <p>El uso nocturno de redes sociales interfiere con los patrones de sueño debido a la luz azul de las pantallas y la estimulación mental. La falta de sueño de calidad afecta la salud mental, el rendimiento académico y el bienestar general.</p>
+                    <h4><i class="fas fa-bed"></i> Alteración del Patrón de Sueño</h4>
+                    <p>El uso nocturno de TikTok, especialmente el "justo un video más", interfiere con los ciclos naturales de sueño debido a la luz azul y la estimulación mental, afectando la calidad del descanso.</p>
                 </div>
                 <div class="effect-item">
-                    <h4><i class="fas fa-exclamation-triangle"></i> Ciberacoso</h4>
-                    <p>Las plataformas digitales pueden facilitar el acoso, que tiene efectos devastadores en la salud emocional de los estudiantes. El anonimato y la distancia física pueden intensificar estos comportamientos dañinos.</p>
+                    <h4><i class="fas fa-exclamation-triangle"></i> Comparación Social Dañina</h4>
+                    <p>La plataforma facilita la comparación constante con creadores de contenido que muestran versiones idealizadas de sus vidas, cuerpos o habilidades, afectando la autoestima y autopercepción.</p>
                 </div>
                 <div class="effect-item">
-                    <h4><i class="fas fa-mobile-alt"></i> Adicción Digital</h4>
-                    <p>El diseño adictivo de las redes sociales (notificaciones, recompensas variables, scroll infinito) puede llevar a un uso compulsivo, afectando las relaciones personales, la productividad y el bienestar general.</p>
+                    <h4><i class="fas fa-mobile-alt"></i> Adicción Comportamental</h4>
+                    <p>El diseño de TikTok (scroll infinito, algoritmo personalizado, notificaciones) está específicamente diseñado para crear hábitos de uso compulsivo, similar a los mecanismos de los juegos de azar.</p>
                 </div>
             </div>
             <div class="card">
-                <h3>El Mecanismo Psicológico</h3>
-                <p>Las redes sociales activan el sistema de recompensa del cerebro de manera similar a otras adicciones. Cada like, comentario o notificación libera dopamina, creando un ciclo de recompensa que refuerza el comportamiento de uso. Este mecanismo neuroquímico explica por qué puede ser tan difícil desconectarse, incluso cuando somos conscientes de los efectos negativos.</p>
-                <p>Además, los algoritmos de estas plataformas están diseñados para mantenernos enganchados, mostrándonos contenido que provoca fuertes reacciones emocionales, ya sean positivas o negativas.</p>
+                <h3>El Mecanismo Psicológico de TikTok</h3>
+                <p>TikTok activa el sistema de recompensa del cerebro mediante la liberación de dopamina. Cada video nuevo representa una potencial recompensa (entretenimiento, información, validación), creando un ciclo de búsqueda constante de estímulos.</p>
+                <p>Además, el algoritmo de TikTok está diseñado para aprender rápidamente las preferencias del usuario y mostrar contenido cada vez más atractivo, haciendo que sea extremadamente difícil dejar de usar la aplicación una vez que se ha comenzado.</p>
             </div>
         </div>
     </section>
@@ -548,40 +556,81 @@
             </div>
             <div class="tips-container">
                 <div class="tip-card">
-                    <h4><i class="fas fa-clock"></i> Establece Límites de Tiempo</h4>
-                    <p>Define horarios específicos para el uso de redes sociales y utiliza aplicaciones que te ayuden a controlar el tiempo de pantalla. Considera establecer "zonas libres de teléfono" en tu hogar, como el dormitorio o la mesa durante las comidas.</p>
+                    <h4><i class="fas fa-clock"></i> Activa el Límite de Tiempo</h4>
+                    <p>Utiliza la función incorporada de "Límite de tiempo" en TikTok que te notifica cuando has alcanzado tu tiempo diario establecido. Comienza con límites realistas (ej. 45 minutos) y reduce gradualmente.</p>
                 </div>
                 <div class="tip-card">
-                    <h4><i class="fas fa-filter"></i> Curar tu Feed</h4>
-                    <p>Elimina cuentas que te hacen sentir mal y sigue aquellas que inspiran, educan o entretienen de manera positiva. Sé consciente de cómo te sientes después de interactuar con cierto contenido y ajusta tu feed en consecuencia.</p>
+                    <h4><i class="fas fa-filter"></i> Curar tu "Para Ti"</h4>
+                    <p>Selecciona "No me interesa" en contenido que te hace sentir mal y sigue cuentas que aportan valor educativo o entretenimiento positivo. Tu feed es un reflejo de tus interacciones.</p>
                 </div>
                 <div class="tip-card">
-                    <h4><i class="fas fa-power-off"></i> Desconecta Regularmente</h4>
-                    <p>Programa "días de desconexión" digital para reconectarte con actividades offline y relaciones cara a cara. Comienza con periodos cortos (como una tarde) y gradualmente aumenta el tiempo de desconexión.</p>
+                    <h4><i class="fas fa-power-off"></i> Desactivar Notificaciones</h4>
+                    <p>Elimina las notificaciones push que te tentarán a abrir la aplicación constantemente. Programa momentos específicos para revisar TikTok en lugar de hacerlo reactivamente.</p>
                 </div>
                 <div class="tip-card">
-                    <h4><i class="fas fa-brain"></i> Practica la Autoconciencia</h4>
-                    <p>Presta atención a cómo te sientes antes, durante y después de usar redes sociales y ajusta tu uso en consecuencia. Lleva un diario de tus emociones relacionadas con el uso digital para identificar patrones.</p>
+                    <h4><i class="fas fa-brain"></i> Practicar el Uso Consciente</h4>
+                    <p>Antes de abrir TikTok, pregúntate: "¿Qué necesidad estoy tratando de satisfacer?" (aburrimiento, conexión, evasión). Esto te ayuda a usar la plataforma de manera intencional.</p>
                 </div>
                 <div class="tip-card">
-                    <h4><i class="fas fa-balance-scale"></i> No Comparar tu Vida Interior con las Vidas Exteriores de Otros</h4>
-                    <p>Recuerda que las redes sociales muestran versiones editadas y selectivas de la realidad. Practica la gratitud por tu propia vida y reconoce que todos enfrentamos desafíos, incluso si no los comparten en línea.</p>
+                    <h4><i class="fas fa-ban"></i> Establecer Zonas Libres de TikTok</h4>
+                    <p>Designa espacios y momentos específicos donde no usarás TikTok, como durante las comidas, en el dormitorio o mientras estudias. Estos límites físicos ayudan a crear hábitos más saludables.</p>
                 </div>
                 <div class="tip-card">
-                    <h4><i class="fas fa-hands-helping"></i> Busca Ayuda si es Necesario</h4>
-                    <p>Si el uso de redes sociales está afectando significativamente tu bienestar, considera hablar con un consejero o profesional de salud mental. No subestimes el impacto que estas plataformas pueden tener en tu salud emocional.</p>
+                    <h4><i class="fas fa-hands-helping"></i> Buscar Alternativas Reales</h4>
+                    <p>Identifica actividades que puedas hacer en lugar de usar TikTok cuando sientas el impulso: leer, hacer ejercicio, llamar a un amigo, practicar un hobby. Ten alternativas preparadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Técnicas de Gestión del Tiempo -->
+    <section id="tecnicas">
+        <div class="container">
+            <div class="section-title">
+                <h2>Técnicas para Mejor Uso del Tiempo</h2>
+            </div>
+            <div class="techniques-grid">
+                <div class="technique-card">
+                    <h4><i class="fas fa-hourglass-start"></i> Técnica Pomodoro Modificada</h4>
+                    <p>Estudia o trabaja durante 25 minutos, luego toma un descanso de 5 minutos. En lugar de usar TikTok durante los descansos, realiza estiramientos, bebe agua o respira profundamente.</p>
+                </div>
+                <div class="technique-card">
+                    <h4><i class="fas fa-calendar-alt"></i> Programación de Bloqueos</h4>
+                    <p>Asigna bloques específicos de tiempo en tu agenda para usar TikTok (ej. 20 minutos después del almuerzo). Fuera de estos bloques, la aplicación está prohibida.</p>
+                </div>
+                <div class="technique-card">
+                    <h4><i class="fas fa-tasks"></i> Método de Recompensa</h4>
+                    <p>Establece que solo puedes usar TikTok después de completar tareas importantes (estudiar un capítulo, terminar un proyecto). Convierte TikTok en una recompensa, no en una distracción.</p>
+                </div>
+                <div class="technique-card">
+                    <h4><i class="fas fa-stopwatch"></i> Temporizador Físico</h4>
+                    <p>Usa un temporizador físico (no el del teléfono) cuando abras TikTok. Cuando suene, cierra la aplicación inmediatamente, sin excepciones.</p>
+                </div>
+                <div class="technique-card">
+                    <h4><i class="fas fa-exchange-alt"></i> Sustitución de Hábitos</h4>
+                    <p>Identifica los momentos en que normalmente usarías TikTok (esperando, aburrido) y ten preparada una alternativa: app de lectura, podcast, notas para escribir ideas.</p>
+                </div>
+                <div class="technique-card">
+                    <h4><i class="fas fa-chart-line"></i> Seguimiento y Análisis</h4>
+                    <p>Lleva un registro durante una semana de cuánto tiempo pasas en TikTok y cómo te sientes después. Los datos concretos pueden motivar cambios.</p>
                 </div>
             </div>
             <div class="card">
-                <h3>La Técnica del "Uso Consciente"</h3>
-                <p>Una estrategia efectiva es practicar el "uso consciente" de redes sociales. Antes de abrir una aplicación, pregúntate: "¿Qué necesidad estoy tratando de satisfacer?" (aburrimiento, conexión, información, etc.). Esto te ayuda a usar las plataformas de manera intencional en lugar de reactiva.</p>
-                <p>Además, establece propósitos específicos para cada sesión (por ejemplo: "voy a revisar mensajes importantes durante 10 minutos") y cierra la aplicación una vez cumplido ese propósito.</p>
+                <h3>El Enfoque de Desintoxicación Gradual</h3>
+                <p>En lugar de eliminar TikTok por completo (lo que puede generar efecto rebote), considera un enfoque gradual:</p>
+                <ol>
+                    <li>Semana 1: Identifica tu uso actual sin hacer cambios</li>
+                    <li>Semana 2: Reduce un 25% tu tiempo en la plataforma</li>
+                    <li>Semana 3: Reduce otro 25% y elimina una sesión diaria</li>
+                    <li>Semana 4: Establece tu tiempo ideal y manténlo</li>
+                </ol>
+                <p>Este enfoque permite que tu cerebro se adapte gradualmente a menos estimulación, haciendo más probable que mantengas los cambios a largo plazo.</p>
             </div>
         </div>
     </section>
 
     <!-- Testimonios -->
-    <section id="testimonios">
+    <section id="testimonios" class="negative-effects">
         <div class="container">
             <div class="section-title">
                 <h2>Testimonios Reales</h2>
@@ -589,21 +638,21 @@
             <div class="testimonials-container">
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "Pasaba más de 5 horas al día en TikTok y Instagram. Empecé a notar que constantemente me comparaba con influencers y me sentía insuficiente. Mi autoestima estaba por los suelos hasta que decidí hacer un detox digital."
+                        "Pasaba más de 3 horas diarias en TikTok sin darme cuenta. Mi capacidad de atención estaba tan afectada que no podía leer un capítulo completo de un libro. Implementar la técnica Pomodoro y desactivar notificaciones me ha ayudado a recuperar el control."
                     </div>
-                    <div class="testimonial-author">- María, 19 años</div>
+                    <div class="testimonial-author">- Ana, 22 años</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "El FOMO me tenía constantemente estresado. Sentía que si no estaba revisando mis redes, me estaba perdiendo algo importante. Fue difícil, pero establecer límites de tiempo me ha ayudado a recuperar el control de mi vida."
+                        "Constantemente me comparaba con los creadores de TikTok y sentía que mi vida era aburrida e insignificante. Curar mi feed y seguir cuentas educativas en lugar de solo entretenimiento vacío ha cambiado completamente mi experiencia en la plataforma."
                     </div>
-                    <div class="testimonial-author">- Carlos, 21 años</div>
+                    <div class="testimonial-author">- Javier, 19 años</div>
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-text">
-                        "No me di cuenta de lo adicta que era hasta que intenté pasar un día sin redes sociales. La ansiedad que sentí fue una señal de alarma. Ahora priorizo las interacciones cara a cara y mi salud mental ha mejorado significativamente."
+                        "El 'doomscrolling' en TikTok me generaba ansiedad constante. Establecer un límite de tiempo estricto y reemplazar el uso matutino de TikTok con meditación ha mejorado significativamente mi salud mental y productividad."
                     </div>
-                    <div class="testimonial-author">- Sofía, 18 años</div>
+                    <div class="testimonial-author">- Laura, 21 años</div>
                 </div>
             </div>
         </div>
@@ -616,17 +665,16 @@
                 <h2>Recursos de Ayuda</h2>
             </div>
             <div class="card">
-                <h3>No Estás Solo: Busca Apoyo</h3>
-                <p>Si estás experimentando dificultades emocionales relacionadas con el uso de redes sociales, estos recursos pueden ayudarte:</p>
+                <h3>Información y Apoyo Adicional</h3>
+                <p>Si estás experimentando dificultades significativas relacionadas con el uso de TikTok u otras plataformas digitales, estos recursos pueden ayudarte:</p>
                 <ul class="resource-list">
-                    <li><a href="#"><i class="fas fa-phone-alt"></i> Línea Nacional de Prevención del Suicidio</a> - 1-888-628-9454</li>
-                    <li><a href="#"><i class="fas fa-sms"></i> Crisis Text Line</a> - Envía "HOME" al 741741</li>
-                    <li><a href="#"><i class="fas fa-globe"></i> Asociación Americana de Psicología</a> - Recursos sobre salud mental para jóvenes</li>
-                    <li><a href="#"><i class="fas fa-laptop-medical"></i> Centro para el Uso Saludable de la Tecnología</a> - Guías y herramientas</li>
-                    <li><a href="#"><i class="fas fa-heart"></i> Mental Health America</a> - Recursos educativos y de apoyo</li>
-                    <li><a href="#"><i class="fas fa-hands-helping"></i> National Alliance on Mental Illness</a> - Grupos de apoyo y información</li>
+                    <li><strong>Centro para el Uso Saludable de la Tecnología</strong> - Investigaciones y guías sobre uso consciente de tecnología</li>
+                    <li><strong>Asociación Americana de Psicología</strong> - Recursos sobre adicción comportamental y salud mental digital</li>
+                    <li><strong>Mental Health America</strong> - Información sobre cómo las redes sociales afectan la salud mental</li>
+                    <li><strong>National Alliance on Mental Illness</strong> - Recursos educativos sobre salud mental y tecnología</li>
+                    <li><strong>Centros para el Control y Prevención de Enfermedades</strong> - Guías sobre salud mental juvenil</li>
                 </ul>
-                <p>Recuerda que buscar ayuda es una muestra de fortaleza, no de debilidad. Si sientes que las redes sociales están afectando negativamente tu bienestar, no dudes en contactar a un profesional de salud mental.</p>
+                <p>Si sientes que el uso de TikTok está afectando significativamente tu bienestar, considera hablar con un profesional de salud mental. El uso problemático de redes sociales es un tema cada vez más reconocido en el campo de la psicología.</p>
             </div>
         </div>
     </section>
@@ -634,14 +682,8 @@
     <!-- Pie de página -->
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </div>
-            <p>&copy; 2023 Impacto Emocional de las Redes Sociales en Estudiantes. Todos los derechos reservados.</p>
-            <p>Esta página es con fines educativos e informativos.</p>
+            <p>&copy; 2023 Impacto Emocional de TikTok - Información y Soluciones. Todos los derechos reservados.</p>
+            <p>Esta página es con fines educativos e informativos. No estamos afiliados con TikTok ni con ByteDance.</p>
         </div>
     </footer>
 
@@ -677,7 +719,7 @@
         }, observerOptions);
         
         // Aplicar a las tarjetas y secciones
-        document.querySelectorAll('.card, .stat-card, .effect-item, .tip-card, .testimonial-card').forEach(el => {
+        document.querySelectorAll('.card, .stat-card, .effect-item, .tip-card, .technique-card, .testimonial-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
