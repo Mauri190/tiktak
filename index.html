@@ -238,6 +238,104 @@
             margin-bottom: 0.5rem;
         }
         
+        /* Gráficas de pastel */
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .chart-card {
+            background-color: var(--tiktok-dark);
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .chart-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .chart-title {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--tiktok-aqua);
+            font-size: 1.2rem;
+        }
+        
+        .chart {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            background: conic-gradient(
+                #FE2C55 0% 54.9%,
+                #25F4EE 54.9% 67.5%,
+                #69F0AE 67.5% 82.1%,
+                #FF2D6F 82.1% 91%,
+                #A0A0A0 91% 100%
+            );
+        }
+        
+        .chart-2 {
+            background: conic-gradient(
+                #FE2C55 0% 40.7%,
+                #25F4EE 40.7% 70.4%,
+                #69F0AE 70.4% 80.2%,
+                #FF2D6F 80.2% 89.1%,
+                #A0A0A0 89.1% 100%
+            );
+        }
+        
+        .chart-3 {
+            background: conic-gradient(
+                #FE2C55 0% 29.7%,
+                #25F4EE 29.7% 65.4%,
+                #69F0AE 65.4% 86.3%,
+                #FF2D6F 86.3% 100%
+            );
+        }
+        
+        .chart-center {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            background: var(--tiktok-dark);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-weight: bold;
+        }
+        
+        .chart-legend {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        
         /* Efectos negativos */
         .negative-effects {
             background-color: rgba(18, 18, 18, 0.8);
@@ -314,6 +412,7 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: transform 0.3s;
+            cursor: pointer;
         }
         
         .technique-card:hover {
@@ -325,6 +424,149 @@
             color: var(--tiktok-aqua);
             margin-bottom: 1rem;
             font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .technique-card h4 i {
+            margin-right: 10px;
+        }
+        
+        /* Modal para cronómetros */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: var(--tiktok-dark);
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-gray);
+            transition: color 0.3s;
+        }
+        
+        .close-modal:hover {
+            color: var(--tiktok-red);
+        }
+        
+        .modal-title {
+            color: var(--tiktok-aqua);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .timer-container {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .timer-display {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--tiktok-blue);
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .timer-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .timer-btn-control {
+            background: var(--tiktok-blue);
+            color: var(--tiktok-black);
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .timer-btn-control:hover {
+            background: var(--tiktok-aqua);
+        }
+        
+        .timer-btn-control.reset {
+            background: var(--tiktok-red);
+            color: white;
+        }
+        
+        .timer-btn-control.reset:hover {
+            background: #d0006f;
+        }
+        
+        .timer-settings {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .timer-setting {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .timer-setting label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+        
+        .timer-setting input {
+            padding: 0.7rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        
+        .phase-indicator {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .work-phase {
+            background-color: rgba(37, 244, 238, 0.2);
+            color: var(--tiktok-blue);
+        }
+        
+        .break-phase {
+            background-color: rgba(105, 240, 174, 0.2);
+            color: var(--tiktok-aqua);
         }
         
         /* Recursos */
@@ -414,6 +656,18 @@
             .section-title h2 {
                 font-size: 2rem;
             }
+            
+            .timer-settings {
+                grid-template-columns: 1fr;
+            }
+            
+            .timer-display {
+                font-size: 3rem;
+            }
+            
+            .charts-container {
+                grid-template-columns: 1fr;
+            }
         }
         
         /* Animaciones */
@@ -425,6 +679,20 @@
         
         .floating {
             animation: float 5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 1s infinite;
+        }
+        
+        .completed {
+            color: var(--tiktok-aqua);
         }
     </style>
 </head>
@@ -440,6 +708,7 @@
                 <ul class="nav-links">
                     <li><a href="#introduccion">Introducción</a></li>
                     <li><a href="#estadisticas">Estadísticas</a></li>
+                    <li><a href="#encuesta">Encuesta</a></li>
                     <li><a href="#efectos">Efectos</a></li>
                     <li><a href="#consejos">Consejos</a></li>
                     <li><a href="#tecnicas">Técnicas</a></li>
@@ -504,6 +773,104 @@
                 <h3>¿Qué revelan estas estadísticas?</h3>
                 <p>Los datos muestran que TikTok no es simplemente una plataforma de entretenimiento, sino un producto diseñado para maximizar el tiempo de pantalla. Un estudio de 2023 encontró que el algoritmo de TikTok es significativamente más efectivo para mantener la atención de los usuarios que otras plataformas sociales.</p>
                 <p>La naturaleza del contenido en TikTok (videos cortos, scroll infinito, recompensas variables) activa el sistema de recompensa del cerebro de manera similar a las máquinas tragamonedas, creando un ciclo de uso compulsivo difícil de romper.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Encuesta -->
+    <section id="encuesta">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resultados de Encuesta</h2>
+            </div>
+            <div class="charts-container">
+                <div class="chart-card">
+                    <div class="chart-title">1. Uso TikTok varias veces al día</div>
+                    <div class="chart">
+                        <div class="chart-center">182 respuestas</div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #FE2C55;"></div>
+                            <span>54.9% - Totalmente de acuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #25F4EE;"></div>
+                            <span>12.6% - De acuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #69F0AE;"></div>
+                            <span>8.9% - Ni de acuerdo, ni en desacuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #FF2D6F;"></div>
+                            <span>15.4% - En desacuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #A0A0A0;"></div>
+                            <span>8.2% - Totalmente en desacuerdo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="chart-title">2. Paso más de una hora diaria en TikTok</div>
+                    <div class="chart chart-2">
+                        <div class="chart-center">182 respuestas</div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #FE2C55;"></div>
+                            <span>40.7% - Totalmente de acuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #25F4EE;"></div>
+                            <span>29.7% - De acuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #69F0AE;"></div>
+                            <span>9.8% - Ni de acuerdo, ni en desacuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #FF2D6F;"></div>
+                            <span>8.9% - En desacuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #A0A0A0;"></div>
+                            <span>10.9% - Totalmente en desacuerdo</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="chart-title">3. Suelo usar TikTok antes de dormir</div>
+                    <div class="chart chart-3">
+                        <div class="chart-center">182 respuestas</div>
+                    </div>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #FE2C55;"></div>
+                            <span>29.7% - Totalmente de acuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #25F4EE;"></div>
+                            <span>35.7% - De acuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #69F0AE;"></div>
+                            <span>20.9% - Ni de acuerdo, ni en desacuerdo</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #FF2D6F;"></div>
+                            <span>13.7% - Totalmente en desacuerdo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Interpretación de los resultados</h3>
+                <p>Los datos de la encuesta muestran que más de la mitad de los usuarios (54.9%) reconocen usar TikTok varias veces al día, y un 40.7% admite pasar más de una hora diaria en la plataforma. Además, un 65.4% (suma de "Totalmente de acuerdo" y "De acuerdo") utiliza TikTok antes de dormir, lo que puede afectar negativamente la calidad del sueño.</p>
+                <p>Estos resultados confirman los patrones de uso problemático identificados en estudios anteriores y refuerzan la necesidad de implementar estrategias para un uso más consciente de la plataforma.</p>
             </div>
         </div>
     </section>
@@ -584,35 +951,46 @@
     </section>
 
     <!-- Técnicas de Gestión del Tiempo -->
-    <section id="tecnicas">
+    <section id="tecnicas" class="time-management">
         <div class="container">
             <div class="section-title">
                 <h2>Técnicas para Mejor Uso del Tiempo</h2>
             </div>
             <div class="techniques-grid">
-                <div class="technique-card">
-                    <h4><i class="fas fa-hourglass-start"></i> Técnica Pomodoro Modificada</h4>
-                    <p>Estudia o trabaja durante 25 minutos, luego toma un descanso de 5 minutos. En lugar de usar TikTok durante los descansos, realiza estiramientos, bebe agua o respira profundamente.</p>
+                <div class="technique-card" data-technique="pomodoro">
+                    <h4><i class="fas fa-hourglass-start"></i> Técnica Pomodoro</h4>
+                    <p>Trabaja en intervalos de 25 minutos seguidos de descansos cortos de 5 minutos. Después de 4 ciclos, toma un descanso más largo de 15-30 minutos.</p>
+                    <p><strong>Haz clic para abrir el cronómetro</strong></p>
                 </div>
-                <div class="technique-card">
-                    <h4><i class="fas fa-calendar-alt"></i> Programación de Bloqueos</h4>
-                    <p>Asigna bloques específicos de tiempo en tu agenda para usar TikTok (ej. 20 minutos después del almuerzo). Fuera de estos bloques, la aplicación está prohibida.</p>
+                
+                <div class="technique-card" data-technique="90-20">
+                    <h4><i class="fas fa-brain"></i> Técnica 90/20</h4>
+                    <p>Trabaja en bloques de 90 minutos seguidos de descansos de 20 minutos. Basada en los ciclos naturales de concentración del cerebro.</p>
+                    <p><strong>Haz clic para abrir el cronómetro</strong></p>
                 </div>
-                <div class="technique-card">
-                    <h4><i class="fas fa-tasks"></i> Método de Recompensa</h4>
-                    <p>Establece que solo puedes usar TikTok después de completar tareas importantes (estudiar un capítulo, terminar un proyecto). Convierte TikTok en una recompensa, no en una distracción.</p>
+                
+                <div class="technique-card" data-technique="time-blocking">
+                    <h4><i class="fas fa-calendar-alt"></i> Time Blocking</h4>
+                    <p>Asigna bloques de tiempo específicos para diferentes tareas o categorías de trabajo durante tu día. Ideal para planificación diaria.</p>
+                    <p><strong>Haz clic para abrir el cronómetro</strong></p>
                 </div>
-                <div class="technique-card">
-                    <h4><i class="fas fa-stopwatch"></i> Temporizador Físico</h4>
-                    <p>Usa un temporizador físico (no el del teléfono) cuando abras TikTok. Cuando suene, cierra la aplicación inmediatamente, sin excepciones.</p>
+                
+                <div class="technique-card" data-technique="52-17">
+                    <h4><i class="fas fa-chart-line"></i> Método 52/17</h4>
+                    <p>Trabaja durante 52 minutos y descansa 17 minutos. Basado en un estudio que identificó este patrón en los trabajadores más productivos.</p>
+                    <p><strong>Haz clic para abrir el cronómetro</strong></p>
                 </div>
-                <div class="technique-card">
-                    <h4><i class="fas fa-exchange-alt"></i> Sustitución de Hábitos</h4>
-                    <p>Identifica los momentos en que normalmente usarías TikTok (esperando, aburrido) y ten preparada una alternativa: app de lectura, podcast, notas para escribir ideas.</p>
+                
+                <div class="technique-card" data-technique="flowtime">
+                    <h4><i class="fas fa-water"></i> Técnica Flowtime</h4>
+                    <p>Una variante flexible de Pomodoro donde trabajas hasta que sientes que tu concentración disminuye, luego tomas un descanso proporcional.</p>
+                    <p><strong>Haz clic para abrir el cronómetro</strong></p>
                 </div>
-                <div class="technique-card">
-                    <h4><i class="fas fa-chart-line"></i> Seguimiento y Análisis</h4>
-                    <p>Lleva un registro durante una semana de cuánto tiempo pasas en TikTok y cómo te sientes después. Los datos concretos pueden motivar cambios.</p>
+                
+                <div class="technique-card" data-technique="custom">
+                    <h4><i class="fas fa-cogs"></i> Técnica Personalizada</h4>
+                    <p>Crea tu propia técnica con intervalos de trabajo y descanso personalizados según tus necesidades y patrones de concentración.</p>
+                    <p><strong>Haz clic para abrir el cronómetro</strong></p>
                 </div>
             </div>
             <div class="card">
@@ -628,6 +1006,45 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal para Cronómetros -->
+    <div id="timerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title" id="modalTechniqueName">Técnica Pomodoro</h3>
+            
+            <div class="phase-indicator work-phase" id="phaseIndicator">Fase de Trabajo</div>
+            
+            <div class="timer-container">
+                <div class="timer-display" id="timerDisplay">25:00</div>
+            </div>
+            
+            <div class="timer-controls">
+                <button class="timer-btn-control" id="startTimer">Iniciar</button>
+                <button class="timer-btn-control" id="pauseTimer">Pausar</button>
+                <button class="timer-btn-control reset" id="resetTimer">Reiniciar</button>
+            </div>
+            
+            <div class="timer-settings">
+                <div class="timer-setting">
+                    <label for="workTime">Tiempo de trabajo (minutos):</label>
+                    <input type="number" id="workTime" min="1" max="120" value="25">
+                </div>
+                <div class="timer-setting">
+                    <label for="breakTime">Tiempo de descanso (minutos):</label>
+                    <input type="number" id="breakTime" min="1" max="60" value="5">
+                </div>
+                <div class="timer-setting">
+                    <label for="longBreakTime">Descanso largo (minutos):</label>
+                    <input type="number" id="longBreakTime" min="1" max="60" value="15">
+                </div>
+                <div class="timer-setting">
+                    <label for="sessionsBeforeLongBreak">Sesiones antes de descanso largo:</label>
+                    <input type="number" id="sessionsBeforeLongBreak" min="1" max="10" value="4">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Testimonios -->
     <section id="testimonios" class="negative-effects">
@@ -719,12 +1136,218 @@
         }, observerOptions);
         
         // Aplicar a las tarjetas y secciones
-        document.querySelectorAll('.card, .stat-card, .effect-item, .tip-card, .technique-card, .testimonial-card').forEach(el => {
+        document.querySelectorAll('.card, .stat-card, .effect-item, .tip-card, .technique-card, .testimonial-card, .chart-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(el);
         });
+
+        // Sistema de cronómetros
+        const modal = document.getElementById('timerModal');
+        const closeModal = document.querySelector('.close-modal');
+        const techniqueCards = document.querySelectorAll('.technique-card');
+        const modalTechniqueName = document.getElementById('modalTechniqueName');
+        const timerDisplay = document.getElementById('timerDisplay');
+        const phaseIndicator = document.getElementById('phaseIndicator');
+        const startBtn = document.getElementById('startTimer');
+        const pauseBtn = document.getElementById('pauseTimer');
+        const resetBtn = document.getElementById('resetTimer');
+        const workTimeInput = document.getElementById('workTime');
+        const breakTimeInput = document.getElementById('breakTime');
+        const longBreakTimeInput = document.getElementById('longBreakTime');
+        const sessionsBeforeLongBreakInput = document.getElementById('sessionsBeforeLongBreak');
+
+        let timer;
+        let isRunning = false;
+        let isWorkPhase = true;
+        let timeLeft = 25 * 60; // 25 minutos en segundos
+        let currentSession = 1;
+        let totalSessions = 4;
+
+        // Configuraciones predeterminadas para cada técnica
+        const techniqueSettings = {
+            'pomodoro': {
+                workTime: 25,
+                breakTime: 5,
+                longBreakTime: 15,
+                sessionsBeforeLongBreak: 4,
+                name: 'Técnica Pomodoro'
+            },
+            '90-20': {
+                workTime: 90,
+                breakTime: 20,
+                longBreakTime: 30,
+                sessionsBeforeLongBreak: 2,
+                name: 'Técnica 90/20'
+            },
+            'time-blocking': {
+                workTime: 60,
+                breakTime: 10,
+                longBreakTime: 20,
+                sessionsBeforeLongBreak: 3,
+                name: 'Time Blocking'
+            },
+            '52-17': {
+                workTime: 52,
+                breakTime: 17,
+                longBreakTime: 30,
+                sessionsBeforeLongBreak: 4,
+                name: 'Método 52/17'
+            },
+            'flowtime': {
+                workTime: 45,
+                breakTime: 15,
+                longBreakTime: 30,
+                sessionsBeforeLongBreak: 3,
+                name: 'Técnica Flowtime'
+            },
+            'custom': {
+                workTime: 30,
+                breakTime: 5,
+                longBreakTime: 15,
+                sessionsBeforeLongBreak: 4,
+                name: 'Técnica Personalizada'
+            }
+        };
+
+        // Abrir modal al hacer clic en una técnica
+        techniqueCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const technique = card.getAttribute('data-technique');
+                const settings = techniqueSettings[technique];
+                
+                // Aplicar configuraciones
+                workTimeInput.value = settings.workTime;
+                breakTimeInput.value = settings.breakTime;
+                longBreakTimeInput.value = settings.longBreakTime;
+                sessionsBeforeLongBreakInput.value = settings.sessionsBeforeLongBreak;
+                modalTechniqueName.textContent = settings.name;
+                
+                // Reiniciar el temporizador
+                resetTimer();
+                
+                // Mostrar modal
+                modal.style.display = 'flex';
+            });
+        });
+
+        // Cerrar modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            pauseTimer();
+        });
+
+        // Cerrar modal al hacer clic fuera
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                pauseTimer();
+            }
+        });
+
+        // Iniciar temporizador
+        startBtn.addEventListener('click', startTimer);
+
+        // Pausar temporizador
+        pauseBtn.addEventListener('click', pauseTimer);
+
+        // Reiniciar temporizador
+        resetBtn.addEventListener('click', resetTimer);
+
+        function startTimer() {
+            if (!isRunning) {
+                isRunning = true;
+                timer = setInterval(updateTimer, 1000);
+                startBtn.textContent = 'Reanudar';
+            }
+        }
+
+        function pauseTimer() {
+            if (isRunning) {
+                isRunning = false;
+                clearInterval(timer);
+                startBtn.textContent = 'Reanudar';
+            }
+        }
+
+        function resetTimer() {
+            pauseTimer();
+            isWorkPhase = true;
+            currentSession = 1;
+            updateTimerDisplay();
+            phaseIndicator.textContent = 'Fase de Trabajo';
+            phaseIndicator.className = 'phase-indicator work-phase';
+            startBtn.textContent = 'Iniciar';
+        }
+
+        function updateTimer() {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateTimerDisplay();
+            } else {
+                // Cambiar de fase
+                if (isWorkPhase) {
+                    // Terminó una sesión de trabajo
+                    currentSession++;
+                    if (currentSession > totalSessions) {
+                        // Descanso largo
+                        isWorkPhase = false;
+                        timeLeft = parseInt(longBreakTimeInput.value) * 60;
+                        phaseIndicator.textContent = 'Descanso Largo';
+                        phaseIndicator.className = 'phase-indicator break-phase';
+                        currentSession = 1; // Reiniciar contador de sesiones
+                    } else {
+                        // Descanso corto
+                        isWorkPhase = false;
+                        timeLeft = parseInt(breakTimeInput.value) * 60;
+                        phaseIndicator.textContent = 'Descanso Corto';
+                        phaseIndicator.className = 'phase-indicator break-phase';
+                    }
+                } else {
+                    // Volver a trabajo
+                    isWorkPhase = true;
+                    timeLeft = parseInt(workTimeInput.value) * 60;
+                    phaseIndicator.textContent = 'Fase de Trabajo';
+                    phaseIndicator.className = 'phase-indicator work-phase';
+                }
+                
+                // Reproducir sonido de notificación (simulado con alerta visual)
+                timerDisplay.classList.add('pulse');
+                setTimeout(() => {
+                    timerDisplay.classList.remove('pulse');
+                }, 1000);
+                
+                updateTimerDisplay();
+            }
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            // Actualizar totalSessions cuando cambia el valor
+            totalSessions = parseInt(sessionsBeforeLongBreakInput.value);
+        }
+
+        // Actualizar el tiempo cuando cambian los inputs
+        workTimeInput.addEventListener('change', () => {
+            if (isWorkPhase && !isRunning) {
+                timeLeft = parseInt(workTimeInput.value) * 60;
+                updateTimerDisplay();
+            }
+        });
+
+        breakTimeInput.addEventListener('change', () => {
+            if (!isWorkPhase && !isRunning) {
+                timeLeft = parseInt(breakTimeInput.value) * 60;
+                updateTimerDisplay();
+            }
+        });
+
+        // Inicializar el temporizador
+        resetTimer();
     </script>
 </body>
 </html>
